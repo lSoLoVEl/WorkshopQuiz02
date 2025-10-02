@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webprofile05-Contact</title>
+
+    <!-- Lora Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 90px;
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      nav {
+        flex: 1; /* ดันเมนูให้อยู่กึ่งกลาง */
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 50px 100px;
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #fdd835;
+      }
+
+      nav a.active {
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .btn-talk {
+        border: 1px solid #fff;
+        padding: 16px 32px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-talk:hover {
+        background: #fdd835;
+        color: #000;
+        border-color: #fdd835;
+      }
+
+      main {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      main h1 {
+        font-family: "Lora", serif;
+        font-size: 36px;
+        text-align: left;
+        margin-left: 150px;
+        margin-bottom: 10px;
+      }
+
+      main h2 {
+        font-size: 30px;
+        text-align: center;
+        font-family: "Lora", serif;
+        margin-bottom: 10px;
+      }
+
+      main p {
+        color: #ccc;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+
+      .contact-icons {
+        display: flex;
+        justify-content: center; /* จัดกลางแนวนอนทั้งหมด */
+        gap: 250px; /* ระยะห่างระหว่างไอคอนแต่ละอัน */
+        align-items: flex-start; /* ให้ข้อความเริ่มจากแนวเดียวกัน */
+        margin-top: 90px;
+        flex-wrap: wrap; /* เวลาหน้าจอเล็กจะขึ้นบรรทัดใหม่ */
+      }
+
+      .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* จัดกึ่งกลางแนวนอน */
+        text-align: center; /* จัดข้อความกึ่งกลาง */
+        font-size: 20px;
+        color: #fff;
+      }
+
+      .contact-item img {
+        width: 120.20594024658203px;
+        height: 120.20594024658203px;
+        margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+      }
+
+      .contact-item a,
+      .contact-item span {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .contact-item a:hover {
+        color: #fdd835;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">Sorawit</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+      <a href="contact.html" class="btn-talk" class="active">Let's talk</a>
+    </header>
+
+    <main>
+      <h1>Contact</h1>
+      <h2>Let's Connect</h2>
+      <p>Don't be a stranger! Say hello and let's collaborate</p>
+
+      <div class="contact-icons">
+        <!-- Email -->
+        <div class="contact-item">
+          <img src="./images/Profile Icon.png" alt="Email Icon" />
+          <a href="mailto:ninnin@gmail.com">s6519410044sau.ac.th</a>
+        </div>
+
+        <!-- Location -->
+        <div class="contact-item">
+          <img src="./images/location.png" alt="Location Icon" />
+          <span>Thailand, Bangkok</span>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-item">
+          <img src="./images/contact.png" alt="LinkedIn Icon" />
+          <a href="#" target="_blank">Sorawit</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

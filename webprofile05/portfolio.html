@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webprofile05-Portfolio</title>
+
+    <!-- Lora Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #0c0c0c;
+        color: white;
+        font-family: "Inter", Arial, sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Header */
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 90px;
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      nav {
+        flex: 1; /* ดันเมนูให้อยู่กึ่งกลาง */
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 50px 100px;
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #fdd835;
+      }
+
+      nav a.active {
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .btn-talk {
+        border: 1px solid #fff;
+        padding: 16px 32px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-talk:hover {
+        background: #fdd835;
+        color: #000;
+        border-color: #fdd835;
+      }
+      section {
+        padding: 40px 20px;
+      }
+
+      section h2 {
+        font-size: 40px;
+        font-family: Lora;
+        margin-bottom: 30px;
+      }
+
+      /* Container เพื่อเว้นขอบซ้ายขวาเท่ากัน */
+      .container {
+        max-width: 1500;
+        margin: 40px 40px;
+        padding: 0 20px;
+      }
+
+      .portfolio-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        gap: 40px;
+        padding: 30px;
+        border-radius: 20px;
+      }
+
+      .portfolio-card.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .card-image img {
+        height: auto;
+        max-height: 400px;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      }
+
+      .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* จัดทุกอย่างให้อยู่กลางแนวนอน */
+        padding: 0 20px;
+        text-align: center; /* ให้ข้อความอยู่ตรงกลาง */
+      }
+
+      .card-content h3 {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .card-content p {
+        font-size: 20px;
+        margin-bottom: 25px;
+        line-height: 1.8;
+        color: #ccc;
+        text-align: justify; /* จัดให้หน้าเท่าหลังเท่า */
+        text-align-last: center; /* บรรทัดสุดท้ายให้อยู่กึ่งกลาง */
+      }
+
+      .card-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center; /* ปุ่มอยู่ตรงกลาง */
+      }
+
+      .card-buttons button,
+      .card-buttons a {
+        padding: 10px 25px;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .card-buttons button:hover,
+      .card-buttons a:hover {
+        background: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">Sorawit</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="portfolio.html " class="active">Portfolio</a>
+      </nav>
+      <a href="contact.html" class="btn-talk">Let's talk</a>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+
+        <!-- Card 1 -->
+        <div class="portfolio-card">
+          <div class="card-image">
+            <img
+              src="./images/bikes.png"
+              alt="Bikes and Beards"
+            />
+          </div>
+          <div class="card-content">
+            <h3>Bikes and Beards</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Nesciunt rem odit labore unde nemo omnis sequi hic sit <br />
+              laudantium repellendus recusandae vitae ea laborum, <br />
+              ipsa nisi eos autem. Blanditiis consequuntur velit <br />
+              nesciunt aperiam odit excepturi repellat libero in enim
+              <br />praesentium! Ex dicta est suscipit ipsam voluptate tempora
+              voluptatum <br />quam distinctio minus saepe nobis <br />
+              nulla amet fugiat sit autem deserunt asperiores vitae ea,<br />
+              libero sed! Libero fugit non.
+            </p>
+            <div class="card-buttons">
+              <button>View</button>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Git code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="portfolio-card reverse">
+          <div class="card-image">
+            <img src="./images/learnify.png" alt="Learnify" />
+          </div>
+          <div class="card-content">
+            <h3>Learnify</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Nesciunt rem odit labore unde nemo omnis sequi hic sit <br />
+              laudantium repellendus recusandae vitae ea laborum, <br />
+              ipsa nisi eos autem. Blanditiis consequuntur velit <br />
+              nesciunt aperiam odit excepturi repellat libero in enim
+              <br />praesentium! Ex dicta est suscipit ipsam voluptate tempora
+              voluptatum <br />quam distinctio minus saepe nobis <br />
+              nulla amet fugiat sit autem deserunt asperiores vitae ea,<br />
+              libero sed! Libero fugit non.
+            </p>
+            <div class="card-buttons">
+              <button>View</button>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Git code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="portfolio-card">
+          <div class="card-image">
+            <img
+              src="./images/Anime-x.png"
+              alt="Anime-X"
+            />
+          </div>
+          <div class="card-content">
+            <h3>Anime-X</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Nesciunt rem odit labore unde nemo omnis sequi hic sit <br />
+              laudantium repellendus recusandae vitae ea laborum, <br />
+              ipsa nisi eos autem. Blanditiis consequuntur velit <br />
+              nesciunt aperiam odit excepturi repellat libero in enim
+              <br />praesentium! Ex dicta est suscipit ipsam voluptate tempora
+              voluptatum <br />quam distinctio minus saepe nobis <br />
+              nulla amet fugiat sit autem deserunt asperiores vitae ea,<br />
+              libero sed! Libero fugit non.
+            </p>
+            <div class="card-buttons">
+              <button>View</button>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Git code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="portfolio-card reverse">
+          <div class="card-image">
+            <img src="./images/Tech-z.png" alt="Tech-Z" />
+          </div>
+          <div class="card-content">
+            <h3>Tech-Z</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+              Nesciunt rem odit labore unde nemo omnis sequi hic sit <br />
+              laudantium repellendus recusandae vitae ea laborum, <br />
+              ipsa nisi eos autem. Blanditiis consequuntur velit <br />
+              nesciunt aperiam odit excepturi repellat libero in enim
+              <br />praesentium! Ex dicta est suscipit ipsam voluptate tempora
+              voluptatum <br />quam distinctio minus saepe nobis <br />
+              nulla amet fugiat sit autem deserunt asperiores vitae ea,<br />
+              libero sed! Libero fugit non.
+            </p>
+            <div class="card-buttons">
+              <button>View</button>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-github"></i> Git code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

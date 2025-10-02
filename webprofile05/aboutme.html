@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webprofile05-About Me</title>
+
+    <!-- Lora Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--  Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset & Base */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #000;
+        color: #fff;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 90px;
+      }
+
+      .logo {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      nav {
+        flex: 1; /* ดันเมนูให้อยู่กึ่งกลาง */
+        display: flex;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 50px 100px;
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #fdd835;
+      }
+
+      nav a.active {
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .btn-talk {
+        border: 1px solid #fff;
+        padding: 16px 32px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-talk:hover {
+        background: #fdd835;
+        color: #000;
+        border-color: #fdd835;
+      }
+
+      /* About Section */
+      .about {
+        font-family: Lora;
+        padding: 60px 20px; /* เว้นขอบเล็ก */
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      .about-left h2 {
+        font-family: "Lora", serif;
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      .about-left img {
+        width: 180px;
+        margin-top: 20px;
+      }
+
+      .about-right h3 {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      .about-right p {
+        color: #ccc;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 20px 0;
+      }
+
+      .btn-cv {
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: transparent;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-cv:hover {
+        background: #fdd835;
+        color: #000;
+        border-color: #fdd835;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">Sorawit</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutme.html" class="active">About</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+      <a href="contact.html" class="btn-talk">Let's talk</a>
+    </header>
+
+    <section class="about">
+      <div class="container">
+        <div class="about-left">
+          <h2>About Me</h2>
+          <img src="./images/loader_01.png" alt="About Logo" />
+        </div>
+        <div class="about-right">
+          <h3>
+            Hi, I'm Sorawit. A passionate Front-end Web Developer based in
+            Thailand.
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non,
+            placeat nulla quae odio asperiores ratione! Accusantium placeat
+            dolorem minus eos excepturi modi.
+          </p>
+          <a href="#" class="btn-cv">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

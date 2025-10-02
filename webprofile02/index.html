@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebProfile02</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+      body {
+        padding: 0;
+        margin: 0;
+        /* เปลี่ยน font เป็น Poppins เพื่อให้ดูคล้ายภาพต้นฉบับมากขึ้น */
+        font-family: "Poppins", sans-serif;
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      /* ตั้งค่าความกว้างสูงสุดของเนื้อหาทั้งหมด (สำคัญมาก) */
+      .main-container {
+        max-width: 1280px;
+        height: 700px;
+        margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+        padding: 0 20px; /* เพิ่ม padding ด้านข้าง */
+      }
+      
+
+      /* --- Navbar Section --- */
+      .navbar-sec {
+        display: flex; /* ใช้ Flexbox แทน Grid เพื่อความยืดหยุ่น */
+        justify-content: space-between; /* ชิดซ้ายและชิดขวา */
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        background-color: #1b1b1b;
+        /* ลบ margin ออก เพราะใช้ .main-container จัดการแล้ว */
+      }
+
+      .navbar-sec .menu {
+        display: flex;
+        gap: 30px; /* ช่องว่างระหว่างลิงก์ */
+        margin-left: 85px;
+      }
+
+      .navbar-sec .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem; /* ปรับขนาด font เล็กลงให้คล้ายภาพ */
+        font-weight: 400; /* ทำให้ตัวอักษรไม่หนาเกินไป */
+        opacity: 0.8;
+        transition: color 0.3s;
+        margin-left: 60px;
+      }
+
+      .navbar-sec .menu a:hover {
+        color: #01d5a2;
+        opacity: 1;
+      }
+
+      .social a {
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-right: 60px;
+        opacity: 0.8;
+        transition: color 0.3s;
+      }
+
+      .social a:hover {
+        color: #01d5a2;
+        opacity: 1;
+      }
+
+      /* --- Profile (Hero) Section --- */
+      .profile-hero-sec {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        min-height: 500px; /* กำหนดความสูงขั้นต่ำเพื่อให้เนื้อหามีพื้นที่ */
+      }
+
+      .profile-text {
+        flex: 1; /* ให้ส่วน text ใช้พื้นที่เท่าที่ต้องการ */
+        max-width: 600px;
+      }
+
+      .profile-text h1 {
+        color: #ffffff;
+        font-size: 54px; /* ปรับขนาดให้ใหญ่ขึ้น */
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        text-align: left; /* จัดให้อยู่ชิดซ้าย */
+      }
+
+      .profile-text p {
+        color: #8d8d8d; /* สีเทาอ่อน */
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        text-align: left; /* จัดให้อยู่ชิดซ้าย */
+      }
+
+      /* ปุ่ม Let's get started */
+      .btn-primary {
+        display: inline-block;
+        background: linear-gradient(
+          90deg,
+          #44cc00,
+          #7eff00
+        ); /* ไล่โทนสีเขียว */
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: transform 0.3s;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+      }
+
+      /* รูปภาพโปรไฟล์ */
+      .profile-image {
+        flex-shrink: 0; /* ไม่ให้รูปภาพหดตัว */
+        width: 450px;
+        height: 450px;
+        /* ลบ margin-left 750px ออก เพื่อให้ Flexbox จัดการ */
+      }
+
+      .profile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%; /* ทำให้เป็นวงกลม */
+        /* เพิ่มเงาหรือขอบเพื่อให้ดูมีมิติเหมือนภาพต้นฉบับ */
+        box-shadow: 0 0 40px rgba(108, 255, 0, 0.3);
+      }
+      .second-container {
+        max-width: 1280px;
+        height: 200px;
+        margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+        padding: 0 20px; /* เพิ่ม padding ด้านข้าง */
+      }
+
+      /* --- Clients Section --- */
+      .clients-sec {
+        padding-top: 50px;
+        padding-bottom: 80px;
+        
+      }
+
+      .clients-title {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin-bottom: 25px;
+        opacity: 0.7;
+        
+        
+      }
+
+      .client-logos {
+        display: flex;
+        gap: 120px;
+        align-items: center;
+        margin-left: 60px;
+        
+      }
+
+      .logo-box {
+        font-size: 1.2rem;
+        font-weight: 600;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+        border: 1px solid #5a5a5a;
+        padding: 20px;
+      }
+
+      .logo-box:hover {
+        opacity: 1;
+      }
+
+      /* --- Responsive Adjustments (เพื่อไม่ให้หน้าจอพังบนมือถือ) --- */
+      @media (max-width: 1279px) {
+        .profile-hero-sec {
+          flex-direction: column; /* เรียงจากบนลงล่าง */
+          text-align: center;
+          gap: 30px;
+        }
+
+        .profile-image {
+          order: -1; /* ย้ายรูปภาพไปอยู่ข้างบน */
+          width: 300px;
+          height: 300px;
+        }
+
+        .profile-text {
+          max-width: 100%;
+        }
+
+        .profile-text h1 {
+          font-size: 3rem;
+          text-align: center;
+        }
+
+        .profile-text p {
+          text-align: center;
+        }
+
+        .clients-sec {
+          text-align: center;
+        }
+
+        .client-logos {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div style="background-color: #1b1b1b" class="navbar-sec">
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Testimonials</a>
+          <a href="#">Recent work</a>
+          <a href="#">Get In Touch</a>
+        </div>
+
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-behance"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="profile-hero-sec">
+        <div class="profile-text">
+          <h1>Sorawit Sangboondee</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem.
+          </p>
+          <a href="#" class="btn-primary">Let's get started ></a>
+        </div>
+
+        <div class="profile-image">
+          <img src="./images/Photo here.png" alt="profile" />
+        </div>
+      </div>
+
+      <div class="clients-sec">
+        <p class="clients-title">Worked with</p>
+        <div class="second-container">
+          <div style="background-color: #000000" class=clients-sec>
+          <div class="client-logos">
+            <div class="logo-box">ClickUp</div>
+            <div class="logo-box">Dropbox</div>
+            <div class="logo-box">PAYCHEX</div>
+            <div class="logo-box">elastic</div>
+            <div class="logo-box">stripe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
